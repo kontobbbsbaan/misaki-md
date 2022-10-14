@@ -243,7 +243,7 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 		    { urlButton: { displayText: `Youtube`, url : `${setting.youtubeOwner}` } },
 		    { urlButton: { displayText: `Website`, url : `${setting.web}` } },
 			{ quickReplyButton: { displayText: `Owner`, id: `${prefix}owner` } },
-			{ quickReplyButton: { displayText: `Donasi`, id: `${prefix}donate` } }
+			{ quickReplyButton: { displayText: `Info Bot`, id: `${prefix}info` } }
 		]
         
 		const isImage = (type == 'imageMessage')
@@ -395,11 +395,8 @@ module.exports = async(conn, msg, m, setting, store, welcome) => {
 var teks = `──「 𝔻𝕠𝕟𝕒𝕤𝕚 𝔹𝕠𝕥 」──
 
 Hi ${pushname} 👋🏻
-𝗗𝗮𝗻𝗮 : 𝙎𝙘𝙖𝙣 𝙌𝙧𝙞𝙨 𝙙𝙞 𝘼𝙩𝙖𝙨
-𝗣𝘂𝗹𝘀𝗮 : +62895638102488
 
-𝙏𝙚𝙧𝙞𝙢𝙖𝙠𝙖𝙨𝙞𝙝 𝘽𝙪𝙖𝙩 𝙆𝙖𝙢𝙪 𝙔𝙖𝙣𝙜 𝙎𝙪𝙙𝙖𝙝 𝙈𝙖𝙪 𝘿𝙤𝙣𝙖𝙨𝙞 𝙐𝙣𝙩𝙪𝙠 𝙋𝙚𝙧𝙠𝙚𝙢𝙗𝙖𝙣𝙜𝙖𝙣 𝘽𝙤𝙩 𝙄𝙣𝙞
-𝙏𝙝𝙖𝙣𝙠𝙨 𝙎𝙪𝙨𝙖𝙝 𝙈𝙖𝙪 𝘿𝙤𝙣𝙖𝙨𝙞`
+𝗣𝘂𝗹𝘀𝗮 : 0838-4540-9710`
  conn.sendMessage(from, { caption: teks, image: {url: `${setting.donasiQris}`}, templateButtons: donasibut, footer: 'DONASI UNTUK PERKEMBANGAN BOT MD', mentions: [sender]} )
 			    break
 case prefix+'infobot':
@@ -409,21 +406,13 @@ case prefix+'infobot':
 
 Haii, aku adalah *${setting.botName}*, Yang bisa membantu anda untuk membuat stiker dan download lagu yang di udah di program oleh Pemilik Aku *${setting.ownerName}* aku mempunyai lebih dari 100 fitur yang bisa kau gunakan dengan gratis, kamu Bisa melihat fitur fitur tersebut dengan cara ketik ${prefix}menu
 
-父 *Nama Bot :* ${setting.botName}
-父 *Name Owner :* ${setting.ownerName}
-父 *Nomor Owner :* wa.me/${setting.ownerNumber}
-父 *Engine :* NodeJs
-父 *Status :* Aktif
-父 *Aktif Selama :* ${runtime(process.uptime())}
-父 *Auto Download :* Aktif
-
-===================
-Thanks To
-- Ifran / Rtwone
-- Christian ID
-- Tsuyuzakiメ
-- Penyedia Rest Api
-- Istri Anime`
+ *Nama Bot :* ${setting.botName}
+ *Name Owner :* ${setting.ownerName}
+ *Nomor Owner :* wa.me/${setting.ownerNumber}
+ *Engine :* NodeJs
+ *Status :* Aktif
+ *Aktif Selama :* ${runtime(process.uptime())}
+ *Auto Download :* Aktif`
 
 conn.sendMessage(from, { caption: caption, image: pp_bot }, {quoted: fdoc})
 break
