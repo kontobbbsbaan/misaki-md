@@ -170,8 +170,5 @@ _*${ucapanWaktu} ${pushname !== undefined ? pushname : 'Kak'} 👋*_
 │々 ${prefix}leave
 │々 ${prefix}addprem
 │々 ${prefix}delprem
-└─────────────❏
-
-𝐂𝐫𝐞𝐚𝐭𝐞 𝐁𝐲 © ${setting.ownerName}
-`
+└─────────────❏`
 }
